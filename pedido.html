@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacer Pedido | Posters by Quetzal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Posters by Quetzal</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="pedido.html" class="active">Hacer Pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Inicia tu Cotización</h1>
+        <form id="order-form" class="order-form">
+            <div class="form-group">
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo o WhatsApp:</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="product-type">Producto:</label>
+                <select id="product-type" name="product-type">
+                    <option value="poster">Poster</option>
+                    <option value="sticker">Stickers (Pliego)</option>
+                    <option value="apparel">Playera/Sudadera</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Cuéntanos tu idea (detalles, tamaños, etc):</label>
+                <textarea id="description" name="description" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Solicitud</button>
+        </form>
+        <div id="form-response"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Posters by Quetzal</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
