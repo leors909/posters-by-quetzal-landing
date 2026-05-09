@@ -1,5 +1,4 @@
 
-// Simulación de carga de catálogo mediante una API (JSONPlaceholder o similar)
 document.addEventListener('DOMContentLoaded', () => {
     const catalogGrid = document.getElementById('catalog-grid');
     
@@ -13,11 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Función que usa FETCH (API) para cargar datos ficticios
+
 async function loadCatalog() {
     try {
-        // En un proyecto real, esto sería una llamada a tu Back-end o API de Unsplash
-        // Aquí simularemos datos locales como si vinieran de una API externa
+       
         const products = [
             { id: 1, title: 'Poster Minimalista', price: '$150', category: 'Posters', img: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=500&q=80' },
             { id: 2, title: 'Sticker Pack 90s', price: '$80', category: 'Stickers', img: 'https://images.unsplash.com/photo-1589384416891-83a9930c3ad1?w=500&q=80' },
@@ -26,7 +24,7 @@ async function loadCatalog() {
         ];
 
         const catalogGrid = document.getElementById('catalog-grid');
-        catalogGrid.innerHTML = ''; // Limpiar cargando
+        catalogGrid.innerHTML = ''; 
 
         products.forEach(product => {
             const card = `
@@ -46,7 +44,6 @@ async function loadCatalog() {
     }
 }
 
-// Manejo de formulario con API Mock (JSONPlaceholder)
 async function handleFormSubmission(e) {
     e.preventDefault();
     const responseDiv = document.getElementById('form-response');
@@ -56,7 +53,7 @@ async function handleFormSubmission(e) {
     responseDiv.innerHTML = '<p style="color: blue;">Enviando solicitud a la API...</p>';
 
     try {
-        // Simulando POST a una API de pruebas
+       
         const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
             body: JSON.stringify(data),
